@@ -9,7 +9,10 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:4000/api/:path*',
+        // Use an environment variable if defined, otherwise local
+        destination: process.env.NODE_ENV === 'production'
+          ? 'https://arnavath.cloud/api/:path*'
+          : 'http://localhost:4000/api/:path*',
       },
     ];
   },
