@@ -1,0 +1,65 @@
+[
+  {
+    "id": "Loading Time",
+    "label": "Loading Time",
+    "unit": "mins",
+    "min": 0,
+    "max": 500,
+    "default": 120,
+    "step": 5
+  },
+  {
+    "id": "Hanging Time",
+    "label": "Hanging Time",
+    "unit": "sec",
+    "min": 0,
+    "max": 200,
+    "default": 15,
+    "step": 5
+  },
+  {
+    "id": "Queuing Time",
+    "label": "Queuing Time",
+    "unit": "minss",
+    "min": 0,
+    "max": 400,
+    "default": 30,
+    "step": 5
+  },
+  {
+    "id": "Dumping Time",
+    "label": "Dumping Time",
+    "unit": "sec",
+    "min": 0,
+    "max": 300,
+    "default": 25,
+    "step": 5
+  },
+  {
+    "id": "Spotting Time",
+    "label": "Spotting Time",
+    "unit": "sec",
+    "min": 0,
+    "max": 150,
+    "default": 20,
+    "step": 5
+  },
+  {
+    "id": "Speed",
+    "label": "Speed",
+    "unit": "km/h",
+    "min": 0,
+    "max": 40,
+    "default": 20,
+    "step": 1
+  },
+  {
+    "id": "Distance",
+    "label": "Distance",
+    "unit": "km",
+    "min": 0.5,
+    "max": 5,
+    "default": 3,
+    "step": 0.2
+  }
+]

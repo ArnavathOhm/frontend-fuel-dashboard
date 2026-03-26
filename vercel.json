@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://arnavath.cloud/api/:path*"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/"
+    }
+  ]
+}
