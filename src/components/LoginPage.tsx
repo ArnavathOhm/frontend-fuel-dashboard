@@ -20,6 +20,12 @@ export default function LoginPage() {
     setIsSubmitting(false);
   };
 
+  const handleGuestLogin = async () => {
+    setIsSubmitting(true);
+    await login('guest', 'password');
+    setIsSubmitting(false);
+  };
+
   return (
     <div className="flex-1 flex items-center justify-center bg-gray-50 h-screen w-full px-4">
       <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-border w-full max-w-md">
@@ -69,13 +75,24 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full py-3.5 bg-primary text-white font-bold rounded-xl shadow-md hover:bg-primary/90 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all mt-4"
-          >
-            {isSubmitting ? 'Authenticating...' : 'Secure Login'}
-          </button>
+          <div className="space-y-4 pt-4">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full py-3.5 bg-primary text-white font-bold rounded-xl shadow-md hover:bg-primary/90 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              {isSubmitting ? 'Authenticating...' : 'Secure Login'}
+            </button>
+            
+            <button
+              type="button"
+              onClick={handleGuestLogin}
+              disabled={isSubmitting}
+              className="w-full py-3.5 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              Login as Guest
+            </button>
+          </div>
         </form>
 
         <div className="mt-8 text-center text-xs text-gray-400">
@@ -83,5 +100,6 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+
   );
 }
